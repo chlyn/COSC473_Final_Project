@@ -1,0 +1,364 @@
+/* =============== BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: "Consolas", monospace;
+  color: #33ff33;
+  padding: 20px;
+}
+/* =============== TOP BAR ======================== */
+.topbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.topbar-pill {
+  width: 100%;
+  padding: 12px 20px;
+
+  background: #0d0d0d;
+  border: 2px solid #00ff99;
+  border-radius: 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 0 12px #00ff99;
+}
+
+.topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #00ff99;
+  box-shadow: 0 0 8px #00ff99;
+}
+
+.brand {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.path {
+  opacity: 0.6;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 8px;
+}
+
+.status-light {
+  width: 10px;
+  height: 10px;
+  background: #00ff99;
+  border-radius: 2px;
+  box-shadow: 0 0 6px #00ff99;
+}
+
+/* =============== DESKTOP LAYOUT ================= */
+.desktop {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* =============== WINDOWS ================= */
+.window {
+  background: #050505;
+  border: 2px solid #00ff99;
+  box-shadow: 0 0 12px #00ff99;
+  border-radius: 8px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.window-titlebar {
+  padding: 10px 14px;
+  border-bottom: 2px solid #00ff99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-title {
+  font-weight: bold;
+}
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.ctrl {
+  width: 10px;
+  height: 10px;
+  background: #00ff99;
+  border-radius: 2px;
+  box-shadow: 0 0 5px #00ff99;
+}
+
+.window-content {
+  padding: 20px;
+  min-height: 200px;
+}
+
+.window-right .window-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#thinking-root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* =============== TIC TAC TOE (LEFT WINDOW) ================= */
+
+.ttt-status {
+  border: 2px solid #00ff99;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 14px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 0 8px #00ff99;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 10px;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.ttt-cell {
+  display: grid;
+  place-items: center;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #33ff33;
+
+  background: #000;
+  border: 2px solid #00ff99;
+  border-radius: 8px;
+
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.7);
+
+  transition: transform 0.05s ease, background 0.1s ease, border-color 0.1s ease;
+}
+
+.ttt-cell:hover {
+  transform: translateY(-1px);
+  background: #050505;
+  border-color: #33ff33;
+}
+
+.ttt-cell.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.ttt-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.ttt-btn {
+  padding: 8px 14px;
+  background: #000;
+  color: #33ff33;
+  border: 2px solid #00ff99;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+.ttt-btn:hover {
+  background: #0d0d0d;
+}
+
+.ttt-btn.ghost {
+  background: transparent;
+  border: 2px dashed #00ff99;
+  opacity: 0.9;
+}
+.ttt-btn.ghost:hover {
+  opacity: 1;
+  background: #0b0b0b;
+}
+
+/* =============== LEFT WINDOW TERMINAL =============== */
+.mode-terminal {
+  margin: 120px auto 6px;
+  width: 100%;
+  padding: 8px 10px;
+
+  border: 2px solid #00ff99;
+  border-radius: 6px;
+  background: #030303;
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.7);
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 0.95rem;
+}
+
+.mode-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #33ff33;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.mode-input::placeholder {
+  color: rgba(51, 255, 51, 0.5);
+}
+
+.mode-feedback {
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 6px;
+}
+
+/* ============= THINKING PANEL (RIGHT WINDOW) ============= */
+
+.thinking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+}
+
+.thinking-title {
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.thinking-stats {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.thinking-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 6px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.think-card {
+  border: 2px solid #00ff99;
+  border-radius: 6px;
+  padding: 10px;
+  background: #000;
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.6);
+  height: 140px;
+  width: 140px;
+}
+
+.think-card.best {
+  border-color: #33ff33;
+  box-shadow: 0 0 14px rgba(51, 255, 51, 0.9);
+}
+
+.mini-board {
+  display: grid;
+  grid-template-columns: repeat(3, 20px);
+  gap: 3px;
+  margin-bottom: 8px;
+}
+
+.mini-cell {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #00ff99;
+  color: #33ff33;
+  font-weight: 900;
+  font-size: 0.9rem;
+}
+
+.mini-cell.highlight {
+  background: #061a06;
+  border-color: #33ff33;
+}
+
+.think-meta {
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+}
+
+.val-win {
+  color: #33ff33;
+}
+.val-draw {
+  color: #c084fc;
+}
+.val-lose {
+  color: #ff6bd6;
+}
+
+/* ===== terminal (RIGHT WINDOW) ===== */
+.thinking-terminal {
+  padding: 10px 12px;
+  border: 2px solid #00ff99;
+  border-radius: 6px;
+  background: #030303;
+  box-shadow: 0 0 8px rgba(0, 255, 153, 0.6);
+  font-size: 0.95rem;
+  line-height: 1.35rem;
+  min-height: 50px;
+  white-space: pre-wrap;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.ps-prefix {
+  color: #33ff33;
+  font-weight: 900;
+}
+
+.ps-dim {
+  opacity: 0.8;
+}
+
+.ps-accent {
+  color: #00ff99;
+  font-weight: 900;
+}
