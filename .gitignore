@@ -1,0 +1,21 @@
+# Python venv (should NOT be committed)
+venv/
+.venv/
+env/
+nanoGPT/Lib/
+nanoGPT/Scripts/
+nanoGPT/pyvenv.cfg
+
+# Bytecode / cache
+__pycache__/
+*.pyc
+
+# PyTorch checkpoints (optional)
+*.pt
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
