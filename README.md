@@ -64,6 +64,7 @@ Run the pre-trained Tiny Shakespeare GPT model locally and generate text samples
 The assignment requires:
 
 - Cloning the NanoGPT repository
+- Installing required dependencies
 - Running provided inference script
 - Producing original Shakespeare-style output
 
