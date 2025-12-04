@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>COSC 473 Part 2 Exercise 4</title>
+    <title>COSC 473 Final Project</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
 
@@ -100,11 +100,12 @@
 
           <div class="window-content">
             <div class="ttt-status" id="ngpt-status">
-              Instructions: Start the NanoGPT server locally by running <span class="ps-accent">py serve_nanogpt.py</span> then paste the command below.
+              Instructions: Start the NanoGPT server locally by running
+              <span class="ps-accent">py serve_nanogpt.py</span> then paste the
+              command below.
             </div>
 
             <div class="ngpt-params">
-
               <!-- temperature -->
               <div class="param-group">
                 <div class="param-header">
@@ -137,11 +138,7 @@
               <!-- seed -->
               <div class="param-group">
                 <label for="ngpt-seed">seed</label>
-                <input
-                  id="ngpt-seed"
-                  type="number"
-                  value="1337"
-                />
+                <input id="ngpt-seed" type="number" value="1337" />
               </div>
             </div>
 
@@ -162,9 +159,9 @@
             </div>
 
             <div id="ngpt-feedback" class="mode-feedback">
-              Copy command: py sample.py --out_dir=out-shakespeare-char --device=cpu
+              Copy command: py sample.py --out_dir=out-shakespeare-char
+              --device=cpu
             </div>
-
           </div>
         </section>
 
