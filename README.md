@@ -18,7 +18,9 @@ This project explores two distinct areas of artificial intelligence:
    - Generates text from the pre-trained checkpoint.
    - Allows sampling variation through temperature, max token count, and seed.
 
-Demo
+**Demo**
+
+![](https://github.com/chlyn/COSC473_Final_Project/blob/main/nanoGPT/assets/cosc473-demo.gif)
 ---
 
 ## 🧠 Part II – Exercise 4: Alpha-Beta Programming (Tic-Tac-Toe)
